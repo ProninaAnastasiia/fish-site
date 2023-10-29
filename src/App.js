@@ -7,6 +7,7 @@ function App() {
       <header className="App-header">
       <Navigation />
       </header>
+      <div className="content">      
       <div className="body">
         <h1>Торговый Дом Любови Власовой</h1>
         <p>Наша компания по оптовой торговле вяленой и копченой рыбой предлагает покупателям широкий выбор снековой продукции наивысшего качества.</p>
@@ -23,7 +24,9 @@ function App() {
               title='Вобла 18+ вяленая'
               price='405 ₽/1кг'/>
       </div>
-      
+      </div>
+            
+      <Footer />
     </div>
   );
 }
@@ -37,6 +40,16 @@ function Navigation() {
         <li><a href="#contacts">Контакты</a></li>
       </ul>
     </nav>
+  );
+}
+
+function Footer() {
+  return (
+    <footer>
+      <p>Контактная информация:</p>
+      <p>8 (900) 957-02-02</p>
+      <p>nautilusrus@mail.ru</p>
+    </footer>
   );
 }
 

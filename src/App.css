@@ -9,22 +9,25 @@
   text-align: center;
   font-family: Verdana;
   display: flex;
-    flex-direction:column;
-    margin: auto;
-    background: #F5F5F5;
+  flex-direction:column;
+  min-height: 100vh;
+  margin: auto;
+  background: #F5F5F5;
+}
+
+.content{
+  flex: 1 0 auto;
 }
 
 .App-header {
   width: 100%;
-    background: #14657E;
-    padding: 20px 0;
-    margin-bottom: 30px;
-    position: relative;
+  background: #14657E;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  position: relative;
 }
 
 div.body{
-  display: flex;
-  flex-direction:column;
   margin:auto;
   width:60%;
   color: #5F6368;
@@ -33,11 +36,25 @@ div.body{
 div.body h1 {
   margin-bottom: 30px;
   text-align: center;
-   font-weight: bold;
-   word-spacing: 1rem;
+  font-weight: bold;
+  word-spacing: 1rem;
 }
 div.body p {
   margin-bottom: 5px;
+}
+
+footer{
+  width: 100%;
+  background: #14657E;
+  color: #ffffff;
+  font-size: large;
+  font-weight:normal; 
+  flex: 0 0 auto;
+}
+
+footer p{
+  display: inline-block;
+  padding: 20px;
 }
 
 .nav-list { 
@@ -61,7 +78,7 @@ div.body p {
 } 
 
 .wrapper {
-  margin-top: 30px;
+  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 15rem));
   gap: 5rem;
@@ -102,6 +119,9 @@ div.body p {
   .nav-list li a { 
     font-size: medium;
   } 
+  .App-header {
+    margin-bottom: 20px;
+  }
   div.body h1 {
     font-size:medium;
     margin-bottom: 10px;
@@ -114,6 +134,7 @@ div.body p {
     width:80%;
    }
    .wrapper {
+    margin-top: 20px;
     gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(5rem, 6rem));
   }

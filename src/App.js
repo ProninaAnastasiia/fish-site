@@ -1,5 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route ,Link, Routes} from "react-router-dom";
+import Home from"./Components/home" 
+import About from"./Components/about" 
+import Products from"./Components/products" 
+import Contacts from"./Components/contacts" 
+
 
 function App() {
   return (
@@ -7,26 +12,12 @@ function App() {
       <header className="App-header">
       <Navigation />
       </header>
-      <div className="content">      
-      <div className="body">
-        <h1>Торговый Дом Любови Власовой</h1>
-        <p>Наша компания по оптовой торговле вяленой и копченой рыбой предлагает покупателям широкий выбор снековой продукции наивысшего качества.</p>
-        <p>Основной ассортимент представлен из Мурманской, Цимлянской и Дальневосточной рыбы.</p>
-      </div>
-      <div className="wrapper">
-        <Card img='/images/Камбала-ерш «По-царски» вяленая.jpg'
-              title='Камбала-ерш «По-царски» вяленая'
-              price='945 ₽/1кг'/>
-        <Card img='/images/Лещ Цимлянский 0,5-0,6 кг вяленый.jpg'
-              title='Лещ Цимлянский вяленый'
-              price='360 ₽/1кг'/>
-        <Card img='/images/Вобла 18+ вяленая.jpg'
-              title='Вобла 18+ вяленая'
-              price='405 ₽/1кг'/>
-      </div>
-      <MoreButton />
-      </div>
-    
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="products" element={<Products />} />
+          <Route exact path="about" element={<About />} />
+          <Route exact path="contacts" element={<Contacts />} />
+        </Routes>    
       <Footer />
     </div>
   );
@@ -36,9 +27,10 @@ function Navigation() {
   return (
     <nav>
       <ul className="nav-list">
-        <li><a href="price">Продукция</a></li>
-        <li><a href="about">О компании</a></li>
-        <li><a href="contacts">Контакты</a></li>
+        <li><Link to="/">Главная</Link></li>
+        <li><Link to="/products">Продукция</Link></li>
+        <li><Link to="/about">О компании</Link></li>
+        <li><Link to="/contacts">Контакты</Link></li>
       </ul>
     </nav>
   );
@@ -51,26 +43,6 @@ function Footer() {
       <p>8 (900) 957-02-02</p>
       <p>nautilusrus@mail.ru</p>
     </footer>
-  );
-}
-
-function Card(props) {
-  return (
-    <div className="card">
-        <img src={props.img} class="card_image" />
-        <p className="card_title">{props.title}</p>
-        <p className="card_price">{props.price}</p>
-    </div>
-  );
-}
-
-function MoreButton() {
-  function handleClick() {
-    alert('You clicked me!');
-  }
-
-  return (
-    <button className="moreBtn" onClick={handleClick}>Показать больше продукции</button>
   );
 }
 

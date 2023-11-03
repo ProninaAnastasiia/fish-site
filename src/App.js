@@ -24,8 +24,9 @@ function App() {
               title='Вобла 18+ вяленая'
               price='405 ₽/1кг'/>
       </div>
+      <MoreButton />
       </div>
-            
+    
       <Footer />
     </div>
   );
@@ -34,10 +35,10 @@ function App() {
 function Navigation() {
   return (
     <nav>
-      <ul class="nav-list">
-        <li><a href="#price">Продукция</a></li>
-        <li><a href="#about">О компании</a></li>
-        <li><a href="#contacts">Контакты</a></li>
+      <ul className="nav-list">
+        <li><a href="price">Продукция</a></li>
+        <li><a href="about">О компании</a></li>
+        <li><a href="contacts">Контакты</a></li>
       </ul>
     </nav>
   );
@@ -63,5 +64,14 @@ function Card(props) {
   );
 }
 
+function MoreButton() {
+  function handleClick() {
+    alert('You clicked me!');
+  }
+
+  return (
+    <button className="moreBtn" onClick={handleClick}>Показать больше продукции</button>
+  );
+}
 
 export default App;

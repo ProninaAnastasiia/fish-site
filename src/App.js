@@ -30,7 +30,7 @@ function Navigation() {
         <li><Link to="/">Главная</Link></li>
         <li><Link to="/products">Продукция</Link></li>
         <li><Link to="/about">О компании</Link></li>
-        <li><Link to="/contacts">Контакты</Link></li>
+        {/* <li><Link to="/contacts">Контакты</Link></li> */}
       </ul>
     </nav>
   );
@@ -40,8 +40,8 @@ function Footer() {
   return (
     <footer>
       <p>Контактная информация:</p>
-      <p>8 (900) 957-02-02</p>
-      <p>nautilusrus@mail.ru</p>
+      <a href="tel:89009570202">8 (900) 957-02-02</a>
+      <a href="mailto:nautilusrus@mail.ru">nautilusrus@mail.ru</a>
     </footer>
   );
 }

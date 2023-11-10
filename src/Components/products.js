@@ -4,10 +4,8 @@ import { Card } from "./home";
 export default function Products() {
     return (
         <div className="content">
-            <div className="body">
-                <h1>Продукция</h1>
-                <p>Лучшая вяленая и копченая рыба собственного производства по хорошей цене.</p>
-            </div>
+            <h1>Продукция</h1>
+            <p>Лучшая вяленая и копченая рыба собственного производства по хорошей цене.</p>
             <div className="wrapper">
                 <Card img='/images/Вобла 18+ вяленая.jpg'
                     title='Вобла 18+ вяленая'

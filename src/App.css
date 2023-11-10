@@ -15,8 +15,9 @@
   background: #F5F5F5;
 }
 
-.content{
+.content,.about{
   flex: 1 0 auto;
+  color: #434549;
 }
 
 .App-header {
@@ -30,22 +31,46 @@
 div.body{
   margin:auto;
   width:60%;
-  color: #5F6368;
 }
 
-div.body h1 {
+h1 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: bold;
   word-spacing: 1rem;
 }
+
 div.body p {
   margin-bottom: 5px;
 }
 
+.about{
+  margin: auto;
+  width: 70%;
+}
+
+.about p{
+  text-align: justify;
+  margin-bottom: 5px;
+}
+
+.about ul li{
+  text-align: left;
+  padding-left: 2rem;
+  list-style-type:none;
+  margin: 10px 0;
+}
+
+.contacts{
+  margin: auto;
+  width: 35%;
+  display:flex;
+  justify-content: space-between
+}
+
 .moreBtn{
   font-family: Verdana;
-  margin-top: 70px;
+  margin-top: 50px;
   padding: 15px 30px 15px 30px;
   border-radius:0.7rem;
   border-style: none;
@@ -67,6 +92,16 @@ footer{
 footer p{
   display: inline-block;
   padding: 20px;
+}
+
+footer a{
+  display: inline-block;
+  padding: 20px;
+}
+
+a[href^="tel"], a[href^="mailto"] {
+  color: inherit;
+  text-decoration: none;
 }
 
 .nav-list { 
@@ -94,8 +129,8 @@ footer p{
   margin: auto;
   margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 15rem));
-  gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 14rem));
+  gap: 4rem;
   justify-content: center;
   margin-bottom: 50px;
 }
@@ -121,12 +156,12 @@ footer p{
 }
 
 .card_image{
-  height: 15rem;
-    width: 100%;
-    object-fit: cover;
+  height: 14rem;
+  width: 100%;
+  object-fit: cover;
 } 
 
-@media (min-width: 320px) and (max-width: 700px) {
+@media (min-width: 320px) and (max-width: 568px) {
   .nav-list li {
       display: inline-block;
       margin-right: 30px;
@@ -137,17 +172,22 @@ footer p{
   .App-header {
     margin-bottom: 20px;
   }
-  div.body h1 {
+  h1 {
     font-size:medium;
     margin-bottom: 10px;
   }
-  p {
+  p, a[href^="tel"], a[href^="mailto"] {
     font-size:x-small;
    }
-   div.body {
+   div.body, .about {
     font-size:x-small;
     width:80%;
    }
+
+    .contacts {
+      width: 70%;
+    }
+
    .wrapper {
     margin-top: 20px;
     gap: 1.5rem;
@@ -163,32 +203,45 @@ footer p{
     padding-bottom: 10px;
   }
   .moreBtn{
-    margin-top: 30px;
+    margin-top: 0px;
     padding: 10px 20px 10px 20px;
     font-size: x-small;
   }
 }
 
-@media (min-width: 700px) and (max-width: 1024px) { 
+@media (min-width: 568px) and (max-width: 1024px) {
   .nav-list li {
-      display: inline-block;
-      margin-right: 60px;
-   }
-   div.body h1 {
-    font-size:x-large;
-   }
-   div.body {
-    font-size:normal;
-    width:80%;
-   }
-   .wrapper {
-    gap: 3rem;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 12rem));
+    display: inline-block;
+    margin-right: 60px;
   }
-  .card_image{
-    height: 12rem;
-  } 
+
+  footer{
+  font-size: medium;
+  }
+
+  h1 {
+    font-size: x-large;
+  }
+
+  div.body, .about {
+    font-size: normal;
+    width: 80%;
+  }
+
+  .contacts{
+    width: 60%;
+  }
+
+  .wrapper {
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 8rem));
+  }
+
+  .card_image {
+    height: 8rem;
+  }
 }
+
 
 @media (min-width: 1024px) { 
   .nav-list li {

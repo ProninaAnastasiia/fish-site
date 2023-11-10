@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
@@ -34,12 +35,10 @@ export function Card(props) {
     );
   }
   
-  function MoreButton() {
-    function handleClick() {
-      alert('You clicked me!');
-    }
-  
+  function MoreButton() {  
     return (
-      <button className="moreBtn" onClick={handleClick}>Показать больше продукции</button>
+      <Link to="/products">
+        <button className="moreBtn">Показать больше продукции</button>
+      </Link>
     );
   }

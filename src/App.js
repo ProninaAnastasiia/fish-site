@@ -1,19 +1,20 @@
+import React from 'react';
 import './App.css';
 import { Route ,Link, Routes} from "react-router-dom";
-import Home from"./Components/home" 
-import About from"./Components/about" 
-import Products from"./Components/products" 
-import Contacts from"./Components/contacts" 
+import Home from"./Components/home.jsx" 
+import About from"./Components/about.jsx" 
+import Products from"./Components/products.jsx" 
+import Contacts from"./Components/contacts.jsx" 
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Navigation />
+        <Navigation />
       </header>
         <Routes>
-          <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
           <Route exact path="products" element={<Products />} />
           <Route exact path="about" element={<About />} />
           <Route exact path="contacts" element={<Contacts />} />

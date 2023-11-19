@@ -222,7 +222,6 @@ tr td:last-child {
     grid-template-columns: repeat(auto-fit, minmax(4rem, 6rem));
   }
   .card_image{
-    font-size: small;
     height: 6rem;
   } 
   .card_title{
@@ -230,6 +229,7 @@ tr td:last-child {
     padding: 5px 5px 10px 5px;
   }
   .card_price{
+    font-size: small;
     padding-bottom: 10px;
   }
   .moreBtn{
@@ -246,6 +246,18 @@ tr td:last-child {
   }
   .about {
     width: 85%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 380px) {
+  .wrapper {
+    width: 100%;
+    margin-top: 20px;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(4rem, 6rem));
+  }
+  .card_image {
+    height: 6rem;
   }
 }
 
@@ -281,7 +293,6 @@ tr td:last-child {
     width: 85%;
   }
 }
-
 
 @media (min-width: 1024px) { 
   .nav-list li {

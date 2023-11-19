@@ -16,13 +16,13 @@ export default function Home() {
       <div className="wrapper">
           <Card img='/images/Густера вяленая.jpg'
             title='Густера Цимлянская вяленая'
-              price='160 ₽/1кг'/>
+              price='160 ₽/кг'/>
           <Card img='/images/Камбала-ерш с икрой.jpg'
             title='Камбала-ерш с икрой вяленая'
-              price='600 ₽/1кг'/>
+              price='600 ₽/кг'/>
           <Card img='/images/Карась вяленый.jpg'
             title='Карась Цимлянский вяленый'
-              price='105 ₽/1кг'/>
+              price='105 ₽/кг'/>
       </div>
       <MoreButton />
     </div>
@@ -32,7 +32,7 @@ export default function Home() {
 export function Card(props) {
     return (
       <div className="card">
-          <img src={props.img} className="card_image" />
+        <img src={props.img} alt={props.title} className="card_image" />
           <p className="card_title">{props.title}</p>
           <p className="card_price">{props.price}</p>
       </div>

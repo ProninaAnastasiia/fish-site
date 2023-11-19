@@ -3,8 +3,7 @@ import './App.css';
 import { Route ,Link, Routes} from "react-router-dom";
 import Home from"./Components/home.jsx" 
 import About from"./Components/about.jsx" 
-import Products from"./Components/products.jsx" 
-import Contacts from"./Components/contacts.jsx" 
+import Products from"./Components/products.jsx"
 
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
         <Route exact path="/" element={<Home />} />
           <Route exact path="products" element={<Products />} />
           <Route exact path="about" element={<About />} />
-          <Route exact path="contacts" element={<Contacts />} />
         </Routes>    
       <Footer />
     </div>
@@ -31,7 +29,6 @@ function Navigation() {
         <li><Link to="/">Главная</Link></li>
         <li><Link to="/products">Продукция</Link></li>
         <li><Link to="/about">О компании</Link></li>
-        {/* <li><Link to="/contacts">Контакты</Link></li> */}
       </ul>
     </nav>
   );

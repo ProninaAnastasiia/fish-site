@@ -5,8 +5,8 @@ export default function Products() {
     return (
         <div className="content">
             <Helmet>
-                <title>Продукция - ТД Любови Власовой</title>
-                <meta name="description" content="ООО 'ТД Любови Власовой' поставляет вяленую и копченую рыбу высокого качества по хорошей цене." />
+                <title>Цены - копченая рыба оптом</title>
+                <meta name="description" content="Продажа копченой рыбы высокого качества по выгодной цене от компании 'ТД Любови Власовой'." />
             </Helmet> 
             <h1>Вяленая и копченая рыба оптом</h1>
             <h2>Прайс-лист ООО "ТД Любови Власовой"</h2>
@@ -93,6 +93,11 @@ export default function Products() {
                         <td>15</td>
                         <td>Чехонь Цимлянская вяленая</td>
                         <td>450,00</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Икра горбуши (производство Камчатки)</td>
+                        <td>4100,00</td>
                     </tr>
                 </tbody>
             </table>
